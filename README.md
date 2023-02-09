@@ -1,8 +1,8 @@
-## Model Tuning
+## GPT-J Model Tuning
 
- We are working towards our own improved version of GPT-J for snippet generation.
+ We finetuned GPT-J for title and teaser snippet generation.
  
- Currently, we evaluate the following approaches for model tuning:
+ We evaluated the following approaches for model tuning:
  
  - Classic model [fine tuning](https://github.com/snipaid-nlg/model-tuning/blob/main/GPT-J-6B-8bit-HeadlineGeneration.ipynb)
  - Multitask fine tuning
@@ -10,5 +10,15 @@
  
  ### Results
  
-Prompt tuning does not prove to be successfull. \
-Fine tuning and multitask fine tuning seem promising.
+Prompt tuning did not prove to be successfull.  
+Fine tuning and multitask fine tuning delivered promising results.
+
+### Finetuned models
+
+We finetuned [GPT-J-6B-8bit](https://huggingface.co/hivemind/gpt-j-6B-8bit) for title and teaser generation with multitask finetuning.  
+We finetuned on two datasets with different sizes.
+
+| Model | Capabilities | Dataset |
+|:------|:--------|:-------------|
+| [gptj-title-teaser-1k](https://huggingface.co/snipaid/gptj-title-teaser-1k) | title and teaser generation | 1.000 german online news from varying publishers |
+| [gptj-title-teaser-10k](https://huggingface.co/snipaid/gptj-title-teaser-10k) | title and teaser generation | 10.000 german online news from varying publishers |
